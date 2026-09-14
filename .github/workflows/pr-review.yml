@@ -1,0 +1,12 @@
+name: PR Review
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Much1r1/pr-review-bot@main
+        with:
+          groq-api-key: ${{ secrets.GROQ_API_KEY }}
